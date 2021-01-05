@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<head>
+<!-- <link rel="stylesheet"
+type="text/css"
+href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css"
+/>-->
+</head>
+
+<body class="0--body">
+<div id="main"></div>
+<script type="module">
+import {
+Runtime,
+Inspector
+} from "@observablehq/runtime";
+import { compiler } from "@asg017/unofficial-observablehq-compiler";
+
+const compile = new Compiler();
+compile.module(
+`
+md\` This cell contains **markdown**\`
+`
+)
+.then(define => {
+const rt = new Runtime();
+window.MODULE = rt.module(
+define,
+Inspector.into(document.querySelector("#main"))
+);
+});
+</script>
+</body>
