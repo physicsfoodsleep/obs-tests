@@ -152,4 +152,4 @@ ${o}
 var define;
 var e,n=require("@observablehq/runtime"),r=require("@alex.garcia/unofficial-observablehq-compiler"),o=new r.Compiler;o.module('\nmd` This cell contains **markdown**`\n\nimport {ramp} from "@mbostock/color-ramp"\n\nramp(t => `hsl(${t * 360}, 100%, 50%`)\n').then(function(e){var r=new n.Runtime;window.MODULE=r.module(e,n.Inspector.into(document.querySelector("#main")))});
 },{"@observablehq/runtime":"y77B","@alex.garcia/unofficial-observablehq-compiler":"wmSw"}]},{},["Focm"], null)
-//# sourceMappingURL=/obs-tests.5faeec60.js.map
+//# sourceMappingURL=obs-tests.5faeec60.js.map
